@@ -1,0 +1,4 @@
+Solutions to Spivak's Comprehensive Introduction to Differential
+Geometry: Vol 1.
+
+*Warning*: I don't know what I'm talking about.

@@ -1,0 +1,105 @@
+#+LATEX_CLASS_OPTIONS: [12pt]
+#+OPTIONS: num:nil toc:nil
+#+LATEX_HEADER: \usepackage[sc, osf]{mathpazo}
+#+LATEX_HEADER: \usepackage[euler-digits, small]{eulervm}
+#+LATEX_HEADER: \usepackage{parskip}
+#+LATEX_HEADER: \usepackage[left = 2cm, right = 2cm, top = 2cm, bottom = 2cm]{geometry}
+#+LATEX_HEADER: \def\R{\mathbb{R}}
+* Chapter 1: Manifolds
+** 1
+   In the first part, verify that the conditions required for metric
+   is satisfied.
+
+   In the second part, one has to show that $B_{\bar{d}}(x,
+   \varepsilon') \subset B_{d}{x, \epsilon} \subset B_{\bar{d}}{x,
+   \varepsilon}$.
+   
+** 2
+   This is trivial. 
+** 3
+   Basically, you have to make use of the local properties of the
+   Euclidean space.
+
+   For (b), proceed in the following manner: Take $x_0 \in X$, let the
+   set $A$ be all points $y$ in $X$ such that there exists a path from
+   $x_0$ to $y$. Show that this set is both open and closed; since the
+   space is connected, $A = X$.
+
+   For (c), I'm guessing that we have to follow in a similar
+   fashion. But here, to show that $A$ is both open and closed looks
+   difficult.
+** 4
+   1. Topologist's Sine curve. 
+      
+   2. Trivial.
+
+   3. Define the relation $\sim$ on $X$ by $x \sim y$ if there is an
+      connected subset of $X$ that contains $x$ and $y$. The
+      equivalence classes of $X$ under $\sim$ are called the connected
+      components of $X$.
+   
+      It is easy to see that connected components are indeed
+      connected, (show that $C$ is the union of connected sets
+      containing at least a point in common.)
+
+      If all the connected components are open, then the space is
+      locally connected, since for every point $x$ in $X$, $C_x$ be
+      the connected component to which $x$ belongs. Since $C_x$ is
+      open, this is the neighborhood that we are looking.
+
+      Suppose the space is locally connected. Let $C_x$ be a connected
+      component, and pick $x\in C_x$. There exists an open connected
+      neighborhood $U$. Since $U$ is connected, it has to lie entirely
+      in $C_x$, and hence $C_x$ is open.
+
+   4. Trivial
+
+   5. Follows from 4.
+** 5
+   1. This is trivial.
+      
+   2. Follows from the fact that for $n \neq m$, $\R^n$ is not
+      homeomorphism to $\R^m$.
+** 6
+   1. It is easy to see that open subsets of an $n$ manifold is an $n$
+      manifold.
+
+      Suppose $M'$ be an $n$ sub-manifold of $M$. If $M'$ is not open,
+      then for some $x \in M'$, every neighborhood of $x$ contains a
+      point outside of $M'$, but there exists a neighborhood of $M'$
+      that is homeomorphic to $\R^n$ and hence this neighborhood is
+      open in $M$, a contradiction to the fact that $M'$ is not open.
+
+   2. Let $x$ be a point of $M$ which has a neighborhood of dimension
+      $n$. Define $A$ to be all points of $M$ that has dimension equal
+      to $n$. It is enough to show that $A$ is both open and closed.
+
+      $A$ is open: If $y \in A$, then $y$ has a neighborhood
+      homeomorphic to $\R^n$; clearly all points in these neighborhood
+      lies in $A$, i.e., $A$ is open.
+
+      $A$ is closed: the space is locally metrizable, let $y$ be a
+      limit point of $A$, $\{y_n\}$ be a sequence of points in $A$
+      that converges to $y$, if $y$ has a neighborhood of dimension
+      $m$ where $m \neq n$, we have a contradiction. Since for large
+      enough $n$, $x_n$ has a neighborhood homeomorphic to $\R^n$ and
+      also another neighborhood homeomorphic to $\R^m$ (I'm taking for
+      faith that this can't happen.)
+
+      On second thought, we don't have to summon the
+      locally-metrizable property.
+** 7 
+   1. An easy application of the intermediate value theorem.
+      
+   2. I'm assuming that by an interval, the author is referring to an
+      open interval, i.e., sets of the form $(a, b)$.
+
+      This is trivial from 1.
+
+   3. I'm assuming that by "f is homeomorphism", the author is
+      referring to the fact that $f$ is a homeomorphism between $I$
+      and $f(I)$.
+
+      This is trivial from 2.
+** 8 
+   1. 
