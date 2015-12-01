@@ -5,15 +5,17 @@
 #+LATEX_HEADER: \usepackage{parskip}
 #+LATEX_HEADER: \usepackage[left = 2cm, right = 2cm, top = 2cm, bottom = 2cm]{geometry}
 #+LATEX_HEADER: \def\R{\mathbb{R}}
+#+LATEX_HEADER: \def\x{\mathbf{x}}
 #+LATEX_HEADER: \def\mob{\textup{M{\"o}bius}}
+#+LATEX_HEADER: \def\C{\mathbb{C}}
 * Chapter 1: Manifolds
 ** 1
    In the first part, verify that the conditions required for metric
    is satisfied.
 
    In the second part, one has to show that $B_{\bar{d}}(x,
-   \varepsilon') \subset B_{d}{x, \epsilon} \subset B_{\bar{d}}{x,
-   \varepsilon}$.
+   \varepsilon') \subset B_{d}(x, \epsilon) \subset B_{\bar{d}}(x,
+   \varepsilon)$.
    
 ** 2
    This is trivial. 
@@ -89,7 +91,7 @@
 
       On second thought, we don't have to summon the
       locally-metrizable property.
-** 7 
+** 7
    1. An easy application of the intermediate value theorem.
       
    2. I'm assuming that by an interval, the author is referring to an
@@ -102,8 +104,19 @@
       and $f(I)$.
 
       This is trivial from 2.
-** TODO 8 
-   1.
+** TODO 8
+   1. It is easy to see that two components cannot be bounded at the
+      same time, for, if they are bounded (call the components $B$ and
+      $C$), then $\R = A \cap B \cap C$ is also bounded, a
+      contradiction.
+
+      So it is enough to show that one component is bounded. WLOG,
+      assume that $0$ lies "inside" the $A$. Let $0$ belong to the
+      component $B$. Since $A$ is compact, $A$ is bounded and thus the
+      "inside" of $A$ is bounded.
+      
+   2. 
+      
 ** TODO 9
    1. Pick a point in $\R$, then $\R - \{x\}$ is disconnected, while
       $\R^n - \{x\}$, where $n > 1$, is connected.
@@ -118,12 +131,12 @@
    these countable sets to get a countable base for $M$.
 
    Again, compact metrizable spaces are also
-** 12 
+** 12
    1. $f(x, y) = \frac{-2x}{y - 1}$.
       
    2. $f(x_1, x_2, \cdots, x_n) = (\frac{-2x_1}{x_n -1},
       \frac{2x_1}{x_n - 1}, \cdots, \frac{-2x_{n-1}}{x_n - 1})$.
-** 13 
+** 13
    1. One has to show that the two definitions (the original
       definition, and the definition in which open sets need not
       contain the antipodal point), will give rise to the same
@@ -142,3 +155,34 @@
       strip, but it isn't open as per the original definition.
 
       The two mappings differ in the symmetry of the map $f$.
+** TODO 14
+   1. 
+      
+   2. This follows from the definition of $\P^2$.
+** 15
+   1. Imagine $S^1$ lying inside $\C$, consider the map $f \colon S^1
+      \rightarrow S^1$ defined by $f(z) = z^2$. It is easy to see that
+      this map is a quotient map since saturated open sets are mapped
+      to open sets of $S^1$. (I think that saturated sets are of the
+      form $V = V \cap (-V)$.)
+
+      Then it can be seen that the quotient space under this map is
+      $\P^1$. There is a natural map $g \colon \P^1 \rightarrow S^1$
+      such that $g(p(x)) = f(x)$ where $p \colon S^1 \rightarrow \P^1$
+      is the identification map. Recall that $g$ is a homeomorphism if
+      and only if $f$ is a quotient map.
+      
+   2. Let us imagine things in the following manner. $S^{n}$ is a
+      subspace of $\R^{n+1}$ defined by $\Vert \x \Vert = 1$, i.e.,
+      all points $\x$ such that $x_1^2 + \cdots + x_{n+1}^2 = 1$.
+
+      One can imagine $S^{n-1}$ as a subspace of $\R^{n}$ in the
+      following manner: all points $\x$ such that $x_1^2 + \cdots +
+      x_{n}^2 = 1$ and $x_{n+1} = 0$.
+
+      Consider $D^n = \{\x \in \R^n \colon \Vert \x \Vert < 1\}$,
+      define $\varphi ((x_1, \cdots, x_n)) = [(x_1, \cdots, x_n,
+      x_{n+1})]$ where $[p] = \{p, -p\}$ and $x_{n+1}$ is the positive
+      real number that satisfies $x_{n+1}^2 = 1 - (x_1^2 + x_2^2 +
+      \cdots + x_{n}^2)$. This map is the required homeomorphism.
+
