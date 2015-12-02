@@ -8,6 +8,7 @@
 #+LATEX_HEADER: \def\x{\mathbf{x}}
 #+LATEX_HEADER: \def\mob{\textup{M{\"o}bius}}
 #+LATEX_HEADER: \def\C{\mathbb{C}}
+#+LATEX_HEADER: \def\P{\mathbb{P}}
 * Chapter 1: Manifolds
 ** 1
    In the first part, verify that the conditions required for metric
@@ -185,4 +186,53 @@
       x_{n+1})]$ where $[p] = \{p, -p\}$ and $x_{n+1}$ is the positive
       real number that satisfies $x_{n+1}^2 = 1 - (x_1^2 + x_2^2 +
       \cdots + x_{n}^2)$. This map is the required homeomorphism.
+** 18 
+   1. Consider $\R$, remove a one-point set. $\R - \{x\}$ is not
+      connected and since compact sets are bounded, removing a compact
+      set from this is not going to make this connected.
 
+      On the other hand, for any compact set $C$ in $\R^n$ will be
+      inside the set $[-M, M]^n$ and $\R^n - [-M, M]^n$ is connected
+
+   2. Consider $C = S^{n-1}$ in $\R^n - \{0\}$. This is compact
+      relative to $\R^n - \{0\}$ (since it is compact relative to
+      $\R^n$.) $R^n - \{0\} - C$ has two connected components, one
+      bounded and the other unbounded. In order to make $\R^n - \{0\}
+      -K$ connected (where $K$ is a compact set), one has to, at
+      least, remove the bounded component completely.
+
+      Imagine the closed set $Y = [a, 0) \cup (0, b]$ for sufficiently
+      small $a$ and $b$ such that $Y$ lies entirely in $K$. $Y$ is
+      closed, since $Y = [a, b] \cap (\R^n - \{0\})$ and being a
+      closed subset of $K$, it is compact. This is a contradiction.
+** 19
+   1. Given any compact subset $C$ of $\R$, pick a closed interval
+      that contains $C$, say $K$, then $\R - K$ has two components. To
+      satisfy the property that $\varepsilon (K) \subset \varepsilon
+      (C)$, $\varepsilon (C)$ has to be the component of $\R - C$ that
+      contains one of the components of $\R - K$. Thus there are two
+      ways of doing this, i.e., $\R$ has two ends.
+
+   2. We repeat the same trick. Given any compact subset $C$ of
+      $\R^n$, $n > 1$, pick a closed $n$ cell that contains $C$, say
+      $K$, then $\R - K$ has exactly one component. We are forced to
+      that components of $\R - C$ that contains $\R - K$, i.e., $\R^n$
+      has one end.
+
+      Suppose $X$ "has one end", then for repeat the above step to see
+      that $X$ is one ended.
+
+      Suppose $X$ is one ended. Suppose for a compact set $C$, $X - C$
+      has more than one component and for every compact set $K$ such
+      that $C \subset K$, $X - K$ has more than one component, then
+      clearly, we have more than one choice for $\varepsilon (C)$, a
+      contradiction.
+
+   3. Refer to Theorem 29.1 in Topology, Munkres.
+
+      $\R \cap \varepsilon (R) = [0, 1]$ (Two point compactification
+      of $\R$.)
+
+      $\R^n \cap \varepsilon (\R^n) = S^n.$ (One point
+      compactification of $\R^n$.)
+      
