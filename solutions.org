@@ -9,6 +9,9 @@
 #+LATEX_HEADER: \def\mob{\textup{M{\"o}bius}}
 #+LATEX_HEADER: \def\C{\mathbb{C}}
 #+LATEX_HEADER: \def\P{\mathbb{P}}
+#+LATEX_HEADER: \def\Cinf{C^{\infty}}
+#+LATEX_HEADER: \def\A{\mathscr{A}}
+#+LATEX_HEADER: \renewcommand{\theenumi}{(\alph{enumi})}
 * Chapter 1: Manifolds
 ** 1
    In the first part, verify that the conditions required for metric
@@ -233,6 +236,47 @@
       $\R \cap \varepsilon (R) = [0, 1]$ (Two point compactification
       of $\R$.)
 
-      $\R^n \cap \varepsilon (\R^n) = S^n.$ (One point
-      compactification of $\R^n$.)
+      $\R^n \cap \varepsilon (\R^n) = S^n$ (One point compactification
+      of $\R^n$.)
+* Chapter 2: Differentiable Structures
+** 1
+   1. Clearly, the symmetric and reflexive properties are satisfied,
+      but there are issues with transitivity.
+
+      Consider the following maps:
+
+      $$\begin{array}{c}
+      a \colon A \rightarrow \R^n \\
+      b \colon B \rightarrow \R^n \\
+      c \colon C \rightarrow \R^n \end{array}
+      $$
+
+      The $\Cinf$ related only means that the composition of one map
+      and the inverse of the other map is $\Cinf$ on the region were
+      their domain overlaps. It could be true that $a \circ c^{-1}$
+      need not be $\Cinf$ on $A \cap C$. An explicit example should be
+      easy to construct.
+
+   2. This has to do with the fact that $\A$ is an Atlas, and the
+      newly added maps are all $\Cinf$ related to *all* maps in the
+      Atlas $\A$.
+** TODO 2
+** 3
+   1. This is trivial from the fact that differentiability implies
+      continuity and chain rule. (I'm assuming that these $\Cinf$
+      functions are from $\R^n$ to $\R^m$.)
       
+   2. The only if part can be easily seen from the fact that
+
+      $$g \circ f \circ x^{-1} = (g \circ y^{-1} ) \circ (y \circ f
+      \circ x^{-1}).$$
+
+      where $(x, A), (y, B)$ are charts of $M$ and $N$ respectively.
+
+      To show the only if part, choose $g = y^{i}$ and $g \circ f =
+      f^{i}$ is $\Cinf$ map from $M$ into $\R$ for all $i = 1, 2,
+      \cdots, m$ (here $m$ is the dimension of $N$.) Which is
+      equivalent to saying that the map $f$ is $\Cinf$. (See result
+      (4) in page 31.)
+
+   
