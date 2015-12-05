@@ -3,6 +3,8 @@
 #+LATEX_HEADER: \usepackage[sc, osf]{mathpazo}
 #+LATEX_HEADER: \usepackage[euler-digits, small]{eulervm}
 #+LATEX_HEADER: \usepackage{parskip}
+#+LATEX_HEADER: \usepackage{mathrsfs}
+#+LATEX_HEADER: \usepackage{titlesec}
 #+LATEX_HEADER: \usepackage[left = 2cm, right = 2cm, top = 2cm, bottom = 2cm]{geometry}
 #+LATEX_HEADER: \def\R{\mathbb{R}}
 #+LATEX_HEADER: \def\x{\mathbf{x}}
@@ -12,6 +14,8 @@
 #+LATEX_HEADER: \def\Cinf{C^{\infty}}
 #+LATEX_HEADER: \def\A{\mathscr{A}}
 #+LATEX_HEADER: \renewcommand{\theenumi}{(\alph{enumi})}
+#+LATEX_HEADER: \newcommand\sectionbreak{\clearpage}
+
 * Chapter 1: Manifolds
 ** 1
    In the first part, verify that the conditions required for metric
@@ -24,17 +28,31 @@
 ** 2
    This is trivial. 
 ** 3
-   Basically, you have to make use of the local properties of the
-   Euclidean space.
+   1. Basically, you have to make use of the local properties of
+      Euclidean spaces.
 
-   For (b), proceed in the following manner: Take $x_0 \in X$, let the
-   set $A$ be all points $y$ in $X$ such that there exists a path from
-   $x_0$ to $y$. Show that this set is both open and closed; since the
-   space is connected, $A = X$.
+   2. For (b), proceed in the following manner: Take $x_0 \in X$, let
+      the set $A$ be all points $y$ in $X$ such that there exists a
+      path from $x_0$ to $y$. Show that this set is both open and
+      closed; since the space is connected, $A = X$.
 
-   For (c), I'm guessing that we have to follow in a similar
-   fashion. But here, to show that $A$ is both open and closed looks
-   difficult.
+   3. Basically, one has to proceed in a similar fashion. But the
+      issue is that the line connecting the limit point $x$ and a
+      point $y$ in its neighborhood need not form an arc (the issue is
+      that this need not result in a one-one path.)
+
+      To resolve this, observe that a continuous image of $[0, 1]$
+      will be compact. Since the space is locally metrizable, if $x$
+      is a limit point of $A$, there is a sequence of points $\{x_n\}$
+      that converges to $x$ in $A$. Choose a point $x_n$ in some
+      metrizable neighborhood of $x$, now the infimum of distances
+      from $x$ to this compact set will be realized at a point $y$ in
+      the range. Join $y$ and $x$ and remove the remainder of the path
+      from $y$ to $x_n$ to obtain an arc to $x$, i.e., $x \in A$.
+
+      Similarly, one can prove openness of $A$, and from the fact that
+      $A$ is connected, we see that $A = X$.
+      
 ** 4
    1. Topologist's Sine curve. 
       
@@ -260,6 +278,21 @@
    2. This has to do with the fact that $\A$ is an Atlas, and the
       newly added maps are all $\Cinf$ related to *all* maps in the
       Atlas $\A$.
+
+      Let $\A'$ be the maximal atlas corresponding to $\A$. We have to
+      prove the following: $(x, X)$ and $(y, Y)$ be two coordinates
+      then $x$ and $y$ are $\Cinf$ related.
+
+      When $x$ or $y$ belongs to $\A$, this is trivial. It is enough
+      to prove for $x$ and $y$ not in $\A$.
+
+      WLOG, assume that there is a chart $(u, U) \in \A$ such that $A
+      \in X \cap Y$ (in the general case, we have to repeat the
+      following procedure for every charts.)
+
+      Thus $y \circ (x^{-1} = (y \circ u^{-1}) \circ (u \circ x^{-1})$
+      and hence is $\Cinf$; similarly $x \circ y^{-1}$ is also $\Cinf$.
+   
 ** TODO 2
 ** 3
    1. This is trivial from the fact that differentiability implies
@@ -278,5 +311,4 @@
       \cdots, m$ (here $m$ is the dimension of $N$.) Which is
       equivalent to saying that the map $f$ is $\Cinf$. (See result
       (4) in page 31.)
-
-   
+** 
