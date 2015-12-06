@@ -251,10 +251,10 @@
 
    3. Refer to Theorem 29.1 in Topology, Munkres.
 
-      $\R \cap \varepsilon (R) = [0, 1]$ (Two point compactification
+      $\R \cup \varepsilon (R) = [0, 1]$ (Two point compactification
       of $\R$.)
 
-      $\R^n \cap \varepsilon (\R^n) = S^n$ (One point compactification
+      $\R^n \cup \varepsilon (\R^n) = S^n$ (One point compactification
       of $\R^n$.)
 * Chapter 2: Differentiable Structures
 ** 1
@@ -311,4 +311,55 @@
       \cdots, m$ (here $m$ is the dimension of $N$.) Which is
       equivalent to saying that the map $f$ is $\Cinf$. (See result
       (4) in page 31.)
-** 
+** 4
+** TODO 5
+   1. To say that an Atlas $\A$ is a maximal means the following: if
+      $h$ is a homeomorphism and such that it is $\Cinf$ related to
+      all elements of $\A$, then $h \in \A$.
+
+      Assume that $\A$ is maximal. Define $\A'$ to be the collection
+      of all $(x, U)$ in $\A$ with $U \subset N$. Suppose that $h$ is
+      a homeomorphism of an open subset of $N$ into $\R^m$ that is
+      $\Cinf$ related to all elements of $N$, then clearly it can be
+      thought of as a homeomorphism of an open subset of $M$ into
+      $\R^m$ and this map is $\Cinf$ related to all elements of $\A$,
+      i.e., $h \in \A$ which implies that $h \in \A'$.
+      
+   2. A subset $U$ of $N$ is open in $N$ if and only if there exists
+      an open set in $M$ such that $U = N \cap M$. Clearly, the set of
+      all $(x\vert_{V \cap N}, V \cap N)$ contains $\A'$; this
+      collection is an Atlas. The equivalence follows from the fact
+      that $\A'$ is maximal.
+
+   3. To prove that $i\colon N \rightarrow M$ is $\Cinf$, we need to
+      show the following:
+
+      For $(y, Y) \in \A'$ and $(x, X) \in \A$, the map $x \circ i
+      \circ y^{-1}$ is $\Cinf$ (for all such choices of $x$ and $y$.)
+
+      Since $(y, Y) = (z\vert_{V \cap N}, V \cap N)$ for some $(z, V)
+      \in \A$, and $x \circ i = x \vert_{N \cap A}$, we see that $x
+      \circ i \circ y^{-1} = x \vert_{N \cap A} \circ z^{-1} \vert_{N
+      \cap V}$ and the RHS is, by definition of $\A$, $\Cinf$.
+** 6
+   Can be verified easily. (Refer to problem 1.12 for explicit form of
+   $P_1$)
+** 7
+   1. This was motivated by example (2), page 33. In $\R^n$, one can
+      construct a $\Cinf$ function that joins any two points and such
+      that the derivative at both the end points equal to the zero
+      vector (2 provides a geometric picture of this.) With this in
+      mind, we can proceed.
+
+      Consider points $p$ and $q$ on a $\Cinf$ manifold $(M,
+      \A)$. Consider the arc from $p$ to $q$ (refer problem 1.3 (c)
+      for existence of such an arc.) Now consider all charts $(x, U)$
+      such that the intersection of the arc and the set $U$ is
+      non-empty. By compactness of the arc, one can choose finitely
+      many such charts that covers the arc. In the range of these
+      charts form the $\Cinf$ function, paste them.
+
+   2. One can adapt the above construction to form a one-one map that
+      is $\Cinf$.
+** 8 f
+      
