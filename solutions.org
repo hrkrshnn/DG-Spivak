@@ -7,12 +7,14 @@
 #+LATEX_HEADER: \usepackage{titlesec}
 #+LATEX_HEADER: \usepackage[left = 2cm, right = 2cm, top = 2cm, bottom = 2cm]{geometry}
 #+LATEX_HEADER: \def\R{\mathbb{R}}
+#+LATEX_HEADER: \def\H{\mathbb{H}}
 #+LATEX_HEADER: \def\x{\mathbf{x}}
 #+LATEX_HEADER: \def\mob{\textup{M{\"o}bius}}
 #+LATEX_HEADER: \def\C{\mathbb{C}}
 #+LATEX_HEADER: \def\P{\mathbb{P}}
 #+LATEX_HEADER: \def\Cinf{C^{\infty}}
 #+LATEX_HEADER: \def\A{\mathscr{A}}
+#+LATEX_HEADER: \def\B{\mathscr{B}}
 #+LATEX_HEADER: \renewcommand{\theenumi}{(\alph{enumi})}
 #+LATEX_HEADER: \newcommand\sectionbreak{\clearpage}
 
@@ -256,6 +258,38 @@
 
       $\R^n \cup \varepsilon (\R^n) = S^n$ (One point compactification
       of $\R^n$.)
+** TODO 25
+   1. This is obvious from the fact that $\R^n$ can be "embedded" in
+      $\H^n$ (that is, there is a continuous map from $\R^n$ to $\H^n$
+      that is homeomorphic to the image.)
+      
+   2. There are points on manifolds with boundary that do not have
+      neighborhoods homeomorphic to $\R^n$. We call the collection of
+      all these points as $\partial M$ or the boundary of the points.
+
+      It is easy to show that $\partial M$ is a closed subset of $M$,
+      for if $x$ is a limit point of $\partial M$ and if $x$ has a
+      neighborhood that is homeomorphic to $\R^n$, then this
+      neighborhood also contains a point from $\partial M$, which is a
+      contradiction.
+
+      Consider the space $M - \partial M$ with the subspace
+      topology. It is easy to see that all points of these space have
+      a neighborhood homeomorphic to $\R^n$ ($n$ may vary), and hence
+      a manifold without boundary by definition.
+
+      Consider the space $\partial M$. If $p$ is a point on $\partial
+      M$ and $V$ be a neighborhood that is homeomorphic to $\H^n$
+      ($\H^n$ can be thought of as $\R^{n-1} \times [0, \infty)$.) Let
+      $\phi\colon V \rightarrow \H^n$ be such a diffeomorphism, then
+      we claim that $p$ is a point of $\partial M$ if and only if for
+      $\phi (x) = 0$.
+
+      From the above claim, it is easy to see that $\partial M$, with
+      the subspace topology is a manifold.
+
+   3. 
+      
 * Chapter 2: Differentiable Structures
 ** 1
    1. Clearly, the symmetric and reflexive properties are satisfied,
@@ -311,7 +345,7 @@
       \cdots, m$ (here $m$ is the dimension of $N$.) Which is
       equivalent to saying that the map $f$ is $\Cinf$. (See result
       (4) in page 31.)
-** 4
+** TODO 4
 ** TODO 5
    1. To say that an Atlas $\A$ is a maximal means the following: if
       $h$ is a homeomorphism and such that it is $\Cinf$ related to
@@ -361,5 +395,53 @@
 
    2. One can adapt the above construction to form a one-one map that
       is $\Cinf$.
-** 8 f
+** TODO 8 
+** 9 
+   Let $S^n$ be covered using the standard atlas containing $2n$
+   homeomorphism, say $\A$; define $\A'$ to be the maximal atlas of
+   the aforementioned atlas.
+
+   Observe that every chart in $(x, U) \in \A$ satisfies are such that
+   the the map $g\colon S^n \rightarrow P^n$ has an inverse when
+   restricted on $U$. Thus define $\B$ by taking the collection of all
+   sets $x \circ g^{-1}$; clearly this is an atlas of $\P$. Let us
+   call the maximal atlas of $\B$ as $\B'$. This is how we define
+   $\Cinf$ structure on $\P$. (I'm assuming that this is the
+   differentiable structure that Spivak is talking about.)
+
+   One can show that if $x$ is an element of $\A'$ if and only if
+   there is an element $z$ in $\B'$ such that $x = z \circ g$. The
+   theorem easily follows from this remark.
+
+   The rank of $f$ and $f \circ g$ are same.
+** 10 
+   1. Obvious. At every point $p$, the function is $\Cinf$, i.e., $f$
+      is $\Cinf$.
       
+   2.
+** 11
+   One can write down $D_j g$ as the limit of $(g(x + h_j (0, 0
+   \cdots, 0, 1)) - f(x)) / h_j$ as $h_j \rightarrow 0$. This limit
+   exists, hence the left and right limits exists and agrees with each
+   other. It is easy to see that, in both cases ($g$ replaced by $h$)
+   the right limit is the same (as $g$ agrees with $f$) and hence $D_j
+   g = D_j h$.
+** TODO 12
+   The natural way to define a $\Cinf$ structure on $\partial M$ is
+   the following: let $(M, \A)$ be a $\Cinf$ structure on $M$, then
+   define $\B$ by taking the collection of all charts
+   $(x\vert_{\partial M}, U \cap\partial M)$, where $(x, U)$ is a
+   chart of $M$.
+
+   Clearly, $\B$ is an atlas. It can be easily shown that this is also
+   a maximal atlas. It can be shown that under this structure the
+   inclusion map is $\Cinf$, homeomorphic to its image, and hence an
+   imbedding.
+
+   We need to prove the uniqueness of this structure .
+** 16
+   Note that the function $p (x) / exp (-x)$ where $p$ is a polynomial
+   has a limit $0$ as $x \rightarrow \infty$. 
+** 19
+   Follows from the hint. 
+
