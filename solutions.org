@@ -446,5 +446,17 @@
    Note that the function $p (x) / exp (-x)$ where $p$ is a polynomial
    has a limit $0$ as $x \rightarrow \infty$. 
 ** 19
-   Follows from the hint. 
-
+   Follows from the hint.
+** TODO 33
+   1. I'm guessing that the formula for determinant and the equation
+      $\operatorname{Det} (A)$ will lead to an equation of the form
+      $f(\x) = 1$, where $\x$ is a $n^2$ dimensional vector and $f$ is
+      a continuous function. The closed-ness of $SL(n, \R)$ follows
+      from the fact that, as a subset of $GL(n, \R)$, it is an inverse
+      of a closed set. (Note that the text mentions that $GL (n, \R)$
+      is an open subset of the $n^2$ dimensional Euclidean space; this
+      can be shown with the help of a similar argument.)
+      
+   2. 
+      
+      
