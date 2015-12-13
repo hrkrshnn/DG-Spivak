@@ -457,6 +457,19 @@
       is an open subset of the $n^2$ dimensional Euclidean space; this
       can be shown with the help of a similar argument.)
       
-   2. 
-      
-      
+   2.
+* Chapter 3: The Tangent Bundle
+** 1
+   1. Suppose there is a metric on $M$ such that each $U_i$ becomes
+      open and that each $x_i$ is homeomorphic to its image, then one
+      can see that the topology on $M$ is the following: 
+
+      1. If $U$ is an open subset of $\R$, them $U$ is open in $M$.
+
+      2. If $U$ is an open (as a subset of $\R$) neighborhood of $0$,
+         then $(U - \{0\}) \cup \{*\}$ is an open set in $M$.
+
+      Notice that this space is not Hausdorff (the condition is
+      violated by the pair $0$, $*$) Since metrizable spaces are
+      Hausdorff, $M$ is not metrizable.
+
