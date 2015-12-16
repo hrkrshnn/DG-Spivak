@@ -1,5 +1,4 @@
 #+LATEX_CLASS_OPTIONS: [12pt]
-#+EXLUDE_TAGS: todo
 #+options: num:nil toc:nil
 #+LATEX_HEADER: \usepackage[sc, osf]{mathpazo}
 #+LATEX_HEADER: \usepackage[euler-digits, small]{eulervm}
@@ -478,5 +477,41 @@
       violated by the pair $0$, $*$) Since metrizable spaces are
       Hausdorff, $M$ is not metrizable.
 
-   2. 
+   2. This follows from the fact that $\R^n$ is second countable,
+      i.e., $\R^n$ has a countable basis, say $\{U_i\}$. Define $A_i$
+      to be equal to $A \cap U_i$. 
 
+   3. Consider a sequence $\{(A_i, A_j)_{k}\}_{k = 1}^{\infty}$ such
+      that $\bar{A_i} \subset A_k$. One can define a continuous
+      function $f_k$ to be $1$ inside $A_i$, zero outside of $A_k$.
+
+      Given any arbitrary closed set $C$, the set $A - C$ is
+      open. That is exists some $k$ for which $A_j \subset C$ and the
+      point $p$ lies in $A_i$. The function corresponding to this $k$
+      satisfies the condition that $f(p) = 1 \neq f (A_j \cap C)$.
+
+      (Incomplete details.)
+
+   4. It is easy to see that the metric $\rho$ is non-negative and
+      finite. The triangle inequality follows from the triangle
+      inequality on the metric $d$.
+
+   5.
+      
+** 2
+   1. Consider the map $\varphi \colon (U \cap V) \times \R^n
+      \rightarrow (U \cap V) \times \R^n$ defined by
+
+      $$\varphi (p, v) = (p, D (y \circ x^{-1}) (x (p)) (v)).$$
+
+      The inverse of the map is given by
+
+      $$\varphi^{-1} (p, v) = (p, D (x \circ y^{-1}) (y (p)) (v)).$$
+
+      It can be seen that both $\varphi$ and its inverse are one-one,
+      onto and are continuous. Hence this is a Homeomorphism between
+      the two spaces.
+
+      The result follows from the above observation.
+
+   2. 
