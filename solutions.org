@@ -15,6 +15,7 @@
 #+LATEX_HEADER: \def\Cinf{C^{\infty}}
 #+LATEX_HEADER: \def\A{\mathscr{A}}
 #+LATEX_HEADER: \def\B{\mathscr{B}}
+#+latex_header: \def\E{\mathcal{E}}
 #+LATEX_HEADER: \renewcommand{\theenumi}{(\alph{enumi})}
 #+LATEX_HEADER: \newcommand\sectionbreak{\clearpage}
 
@@ -464,6 +465,7 @@
    2.
 * Chapter 3: The Tangent Bundle
 ** TODO 1
+
    1. Suppose there is a metric on $M$ such that each $U_i$ becomes
       open and that each $x_i$ is homeomorphic to its image, then one
       can see that the topology on $M$ is the following: 
@@ -498,7 +500,8 @@
 
    5.
       
-** 2
+** TODO 2
+
    1. Consider the map $\varphi \colon (U \cap V) \times \R^n
       \rightarrow (U \cap V) \times \R^n$ defined by
 
@@ -514,4 +517,116 @@
 
       The result follows from the above observation.
 
+   2.
+
+** 3
+
+   *Lemma*: Given two manifolds $M$ and $N$ of the same dimension and
+   $f$ be a bijective continuous function between these two manifolds,
+   then $f$ is a homeomorphism.
+
+   /Proof./ It is enough to show that $f$ is an open mapping, i.e., if
+   $U$ is an open subset of $M$, then $f(U)$ is an open subset of
+   $N$. For $x \in M$, let $f(x) = y$, then it is enough to show that
+   there is an open set in $N$ containing $y$, say $V$ such that $V
+   \subset f(U)$.
+
+   Let $V'$ be an open subset in $N$, containing $y$, and homeomorphic
+
+   to $\R^n$. Consider the set $U' = U \cap f^{-1}(V')$. Observe that
+   $U'$ is open. There exists a subset $W$ of $U$ that is homeomorphic
+   to $\R^n$.
+
+   We have essentially obtained mappings that can be visualized in the
+   following fashion:
+
+   $$\R^n \rightarrow W \rightarrow U' \rightarrow f(U') \rightarrow V' \rightarrow \R^n.$$
+
+   At each step, these mappings are one-one, i.e., the map obtained by
+   composing these mappings is a one-one continuous, say $f'$. By
+   invariance of domain, we see that this is a homeomorphism between
+   the domain and range.
+
+   Thus $f'(W)$ is an open subset of $\R^n$ and hence an open subset
+   of $V'$, say $V$. One can see that $V$ is the required open set. $\blacksquare$
+
+   Observe that the vector bundles have a manifold structure on them
+   (the one that is specified in the local triviality condition.) Now
+   the exercise follows from the above lemma. (/Note/: I'm assuming
+   that the mapping between these two vector bundles is bijective;
+   else consider constant function from a Cylinder into a Mobius
+   strip. I'm also assuming that the two vector bundles are of the
+   same dimension.)
+   
+** 4
+
+   The map $\tilde{f}$ maps fibres isomorphically to other fibers. Let
+   $A_1$, $A_2$ be the collection of zero vectors of $M_1$. One can
+   define $f$ to be the restriction of $\tilde{f}$ over $A_1$ and
+   $A_2$ respectively. Essentially, define $f$ by
+
+   $$f = \pi_1(p) \circ \tilde{f} \circ \pi_1^{-1}.$$
+
+** TODO 5
+   
+   1. Imagine disjoint union of two Mobius strips and another disjoint
+      union of two cylinders. Define $\tilde{f}$ such that it is a
+      isomorphic map between fibers, and $f$ to be the identity. This
+      is clearly a weak-equivalence, but not an equivalence.
+      
    2. 
+
+   3. The trivial 2-dimensional vector bundle over Torus and the
+      product of two Mobius strips.
+
+** 6
+
+   The mapping $h$ can be formed by restricting $\tilde{f}$ over the
+   collection of all zero vectors and again over the collection of all
+   $1$ vectors. The mapping $g$ will be the isomorphism between
+   $\pi_{1}^{-1}(p)$ and $\pi_2^{-1}{g(p)}$.
+
+** 7
+
+   1. It is easy to see that $\pi \circ s (p) = p$. It remains to show
+      that $s$ is a continuous function. It is enough to show that
+      $s^{-1}(U \times V)$ is open for $U \subset E$ and $V \subset
+      \R^n$ where $U$ and $V$ are open, but this is trivial.
+      
+   2. Suppose that a $n$ dimensional vector bundle over $E$, say $B$,
+      is trivial, i.e., there exists a homeomorphism $h\colon B
+      \rightarrow \E^n(\R^n)$ that is also an isomorphism
+      between fibres. Let us denote the the isomorphism between fib re
+      at $p$ and $\R^n$ by $\phi_p \colon \R^n \rightarrow
+      \pi^{-1}(p)$. If $\{e_1, \cdots, e_n\}$ represents the standard
+      basis over $\R^n$, then we can define sections $s_1, \cdots,
+      s_n \colon E \rightarrow B$ in the following way:
+
+      $$s_i(p) = \phi_{p}(e_i) = h^{-1}(p \times e_i).$$
+
+      It is trivial to verify that $s_i$ is a section.
+
+      Suppose that there are $n$ independent sections, say $s_1,
+      \cdots, s_n \colon E \rightarrow B$, then define a map $h \colon
+      B \rightarrow \E^n (\R^n)$ by
+
+      $$h(a_1 s_1(p) + \cdots + a_n s_n(p)) = (p, a_1, \cdots, a_n).$$
+
+      It is clear that this is an isomorphism between fibres. Using
+      local triviality of $E$, we can see that $h$ is a homeomorphism.
+
+   3. Locally, every $n$ plane bundle is same as the trivial
+      bundle. Now, (c) follows from (b).
+
+** 8
+   
+   1. This easily follows from using the chain rule.
+      
+   2. This follows form the fact that charts are $\Cinf$ related and
+      hence their Jacobian has full rank.
+
+   3. Check!
+
+** 9 
+   
+   
