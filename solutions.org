@@ -1,11 +1,18 @@
 #+LATEX_CLASS_OPTIONS: [12pt]
-#+options: num:nil toc:nil
-#+LATEX_HEADER: \usepackage[sc, osf]{mathpazo}
-#+LATEX_HEADER: \usepackage[euler-digits, small]{eulervm}
+#+options: num:nil toc:nil tex:t
+#+latex_header: \usepackage{lmodern}
+#+latex_header: \usepackage[T1]{fontenc}
+#+latex_header: \usepackage{sectsty}
 #+LATEX_HEADER: \usepackage{parskip}
 #+LATEX_HEADER: \usepackage{mathrsfs}
 #+LATEX_HEADER: \usepackage{titlesec}
+#+latex_header: \usepackage{amsthm}
+#+latex_header: \newtheorem*{lemma}{Lemma}
 #+LATEX_HEADER: \usepackage[left = 2cm, right = 2cm, top = 2cm, bottom = 2cm]{geometry}
+#+LATEX_HEADER: \renewcommand{\theenumi}{(\alph{enumi})}
+#+LATEX_HEADER: \newcommand\sectionbreak{\clearpage}
+#+latex_header: \sectionfont{\centering}
+#+latex_header: \subsectionfont{\centering}
 #+LATEX_HEADER: \def\R{\mathbb{R}}
 #+LATEX_HEADER: \def\H{\mathbb{H}}
 #+LATEX_HEADER: \def\x{\mathbf{x}}
@@ -16,8 +23,9 @@
 #+LATEX_HEADER: \def\A{\mathscr{A}}
 #+LATEX_HEADER: \def\B{\mathscr{B}}
 #+latex_header: \def\E{\mathcal{E}}
-#+LATEX_HEADER: \renewcommand{\theenumi}{(\alph{enumi})}
-#+LATEX_HEADER: \newcommand\sectionbreak{\clearpage}
+#+latex_header: \def\SL{\operatorname{SL}}
+#+latex_header: \def\GL{\operatorname{GL}}
+
 
 * Chapter 1: Manifolds
 ** 1
@@ -297,12 +305,11 @@
       but there are issues with transitivity.
 
       Consider the following maps:
-
-      $$\begin{array}{c}
+      \begin{align*}{c}
       a \colon A \rightarrow \R^n \\
       b \colon B \rightarrow \R^n \\
-      c \colon C \rightarrow \R^n \end{array}
-      $$
+      c \colon C \rightarrow \R^n 
+      \end{align*}
 
       The $\Cinf$ related only means that the composition of one map
       and the inverse of the other map is $\Cinf$ on the region were
@@ -456,8 +463,8 @@
    1. I'm guessing that the formula for determinant and the equation
       $\operatorname{Det} (A)$ will lead to an equation of the form
       $f(\x) = 1$, where $\x$ is a $n^2$ dimensional vector and $f$ is
-      a continuous function. The closed-ness of $SL(n, \R)$ follows
-      from the fact that, as a subset of $GL(n, \R)$, it is an inverse
+      a continuous function. The closed-ness of $\SL(n, \R)$ follows
+      from the fact that, as a subset of $\GL(n, \R)$, it is an inverse
       of a closed set. (Note that the text mentions that $GL (n, \R)$
       is an open subset of the $n^2$ dimensional Euclidean space; this
       can be shown with the help of a similar argument.)
@@ -521,11 +528,14 @@
 
 ** 3
 
-   *Lemma*: Given two manifolds $M$ and $N$ of the same dimension and
-   $f$ be a bijective continuous function between these two manifolds,
-   then $f$ is a homeomorphism.
+   \begin{lemma}
+   Given two manifolds $M$ and $N$ of the same dimension and $f$ be a
+   bijective continuous function between these two manifolds, then $f$
+   is a homeomorphism.
+   \end{lemma}
 
-   /Proof./ It is enough to show that $f$ is an open mapping, i.e., if
+   \begin{proof}
+   It is enough to show that $f$ is an open mapping, i.e., if
    $U$ is an open subset of $M$, then $f(U)$ is an open subset of
    $N$. For $x \in M$, let $f(x) = y$, then it is enough to show that
    there is an open set in $N$ containing $y$, say $V$ such that $V
@@ -540,7 +550,8 @@
    We have essentially obtained mappings that can be visualized in the
    following fashion:
 
-   $$\R^n \rightarrow W \rightarrow U' \rightarrow f(U') \rightarrow V' \rightarrow \R^n.$$
+   $$\R^n \rightarrow W \rightarrow U' \rightarrow f(U') \rightarrow
+   V' \rightarrow \R^n.$$
 
    At each step, these mappings are one-one, i.e., the map obtained by
    composing these mappings is a one-one continuous, say $f'$. By
@@ -548,7 +559,9 @@
    the domain and range.
 
    Thus $f'(W)$ is an open subset of $\R^n$ and hence an open subset
-   of $V'$, say $V$. One can see that $V$ is the required open set. $\blacksquare$
+   of $V'$, say $V$. One can see that $V$ is the required open
+   set.
+   \end{proof}
 
    Observe that the vector bundles have a manifold structure on them
    (the one that is specified in the local triviality condition.) Now
@@ -595,12 +608,12 @@
       
    2. Suppose that a $n$ dimensional vector bundle over $E$, say $B$,
       is trivial, i.e., there exists a homeomorphism $h\colon B
-      \rightarrow \E^n(\R^n)$ that is also an isomorphism
-      between fibres. Let us denote the the isomorphism between fib re
-      at $p$ and $\R^n$ by $\phi_p \colon \R^n \rightarrow
-      \pi^{-1}(p)$. If $\{e_1, \cdots, e_n\}$ represents the standard
-      basis over $\R^n$, then we can define sections $s_1, \cdots,
-      s_n \colon E \rightarrow B$ in the following way:
+      \rightarrow \E^n(\R^n)$ that is also an isomorphism between
+      fibres. Let us denote the the isomorphism between fibre at $p$
+      and $\R^n$ by $\phi_p \colon \R^n \rightarrow \pi^{-1}(p)$. If
+      $\{e_1, \cdots, e_n\}$ represents the standard basis over
+      $\R^n$, then we can define sections $s_1, \cdots, s_n \colon E
+      \rightarrow B$ in the following way:
 
       $$s_i(p) = \phi_{p}(e_i) = h^{-1}(p \times e_i).$$
 
@@ -627,6 +640,13 @@
 
    3. Check!
 
-** 9 
+** 9
+   
+   1. The equivalence between $f_{*}$ and $f_{\sharp}$ can be thought
+      of as an equivalence between the domain and range.
+      
+   2. This is obvious.
+
+** 10
    
    
