@@ -649,4 +649,20 @@
 
 ** 10
    
+   Assume that the dimension of $V$ is $n$. Then $v$ is isomorphic to
+   $\R^n$. Let us denote this isomorphism by $f\colon V \rightarrow
+   \R^n$. The topology on $V$ is defined by the be inverse images of
+   open subsets of $\R^n$. The $\Cinf$ structure can be defined by
+   composing $f$ with the charts of $\R^n$.
+
+   The tangent bundle of this space will be the trivial $n$
+   dimensional vector bundle over $V$. Thus $TV$ is homeomorphic to $V
+   \times \R^n$, which in turn is homeomorphic to $V \times V$.
+
+** 11
+   Define $h$ by $(g(x) - g(0) - g'(0)x) / x^2$ when $x \neq 0$ and
+   $g''(0) / 2$, otherwise. It is easy to see that $h$ is $\Cinf$
+   everywhere.
+
+   
    
