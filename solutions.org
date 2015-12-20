@@ -660,9 +660,38 @@
    \times \R^n$, which in turn is homeomorphic to $V \times V$.
 
 ** 11
+   
    Define $h$ by $(g(x) - g(0) - g'(0)x) / x^2$ when $x \neq 0$ and
    $g''(0) / 2$, otherwise. It is easy to see that $h$ is $\Cinf$
    everywhere.
 
+** TODO 12
+
+** 14
+
+   WLOG, assume that $M$ is connected, let the dimension of $M$ be $m$
+   and that of $N$ be $n$. At point $p$, for charts $(x, U)$ and $(y,
+   V)$ of $M$ and $N$ respectively, such that $U$ and $V$ are
+   neighborhoods of $p$ and $f(p)$ respectively, the premise implies
+   that the function $y \circ f \circ x^{-1} \colon x(U \cap V)
+   \subset \R^m \rightarrow y(U \cap V) \R^n$, defined on a connected
+   open subset of $\R^n$, has zero derivative. The later condition
+   implies that the function is constant throughout the domain (refer
+   [[http://math.stackexchange.com/questions/447524/why-does-zero-derivative-imply-a-function-is-locally-constant][Math.SE]] for a proof of this.) Since $y$ and $x$ are homeomorphisms,
+   this immediately implies that $f$ is constant in the domain $x(U
+   \cap V)$ and since this is true for every charts in $x$, $f$ is
+   constant throughout $M$.
+
+** TODO 19
+
+   1. Since $a \cdot e_1 = a \cdot (1, 0, \cdots, 0) = a$, the
+      required unique point $a$ for $s \in S^{n-1}$ is $s$ itself.
+      
+   2. Suppose $a\cdot e_1, \cdots, a\cdot e_n$ are not linearly
+      independent. Let $\sum (\lambda_i (a \cdot e_i)) = 0$, we can
+      rearrange this to see that $a \cdot (\sum (\lambda_i \cdot e_i)) =
+      0$. Since we have a division algebra structure on $\R^n$ and
+      because $e_i, i = 1, \cdots, n$ are linearly independent,
+      $\lambda_i = 0$ for $i = 1, \cdots, n$.
    
    
