@@ -705,4 +705,4 @@
    the tangent plane of $S^2$ at $p$. (/Note:/ this exercise is used
    to show that the point $p_p \in R^3_p$ does not lie inside $S^2_p$,
    which in turn is used to define orientation on $S^2$.)
-   
+ 
