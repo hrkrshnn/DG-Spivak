@@ -694,7 +694,16 @@
       because $e_i, i = 1, \cdots, n$ are linearly independent,
       $\lambda_i = 0$ for $i = 1, \cdots, n$.
 
-   3.
+   3. Without loss of generality one can assume that the tangent plane
+      is the $n-1$ hyperplane in $\R^n$ (last coordinate is zero) and
+      that the projection corresponds to taking the first $n - 1$
+      coordinates. (We can do this because: any plane can be rotated
+      and translated into our aforementioned plane and this mapping
+      preserves the dimension of the vector space.)
+
+      Now (c) follows from (b).
+
+   4. 
 
 ** 21
 
