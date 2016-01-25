@@ -471,6 +471,7 @@
       
    2.
 * Chapter 3: The Tangent Bundle
+
 ** TODO 1
 
    1. Suppose there is a metric on $M$ such that each $U_i$ becomes
@@ -714,4 +715,18 @@
    the tangent plane of $S^2$ at $p$. (/Note:/ this exercise is used
    to show that the point $p_p \in R^3_p$ does not lie inside $S^2_p$,
    which in turn is used to define orientation on $S^2$.)
- 
+
+* Chapter 4: Tensors
+
+** 1
+1. This is easy; follows form the chain rule since
+
+   $$ \frac{\partial(g \circ f) (p)}{dx^{i}}(p) = D_i(g \circ f \circ
+   x^{-1})(x(p)) = D_i(g \circ y^{-1} \circ y \circ f \circ x^{-1}) $$
+
+2. 
+
+   
+
+
+
