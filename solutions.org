@@ -724,9 +724,50 @@
    $$ \frac{\partial(g \circ f) (p)}{dx^{i}}(p) = D_i(g \circ f \circ
    x^{-1})(x(p)) = D_i(g \circ y^{-1} \circ y \circ f \circ x^{-1}) $$
 
-2. 
+2. Use the equivalence between $[x, a]_p$ and $\sum
+   a^{i}\frac{\partial}{\partial x^i}$ and use the fact that $f_{*}$
+   maps $[x, a]$ to $[y, D(y \circ f \circ x^{-1}) (x(p))
+   (a)]_{f(p)}$. Now the equality follows from the chain rule.
 
+   The 'more-general' result follows from the linearity of $f_{*}$. 
+
+3.
+
+** 2
+Follows from the fact that vectors on each fiber has derivation at
+$p$, i.e., if $X \in M_p$, then $X(fg) = f(p)X(g) + g(p)X(f)$.
+
+** TODO 3
+
+** 4
+1. If $v_i = \sum a_{ij} w_j$, then $w^{*}_{i} = \sum
+   a_{ij}v^{*}_{j}$. The observation follows.
    
+2. Suppose $\xi$ be orientable, and $\mu_p = [v_1, \cdots, v_n]_p$ be
+   an orientation at each point. Then define an orientation on
+   $\xi^{*}$ by $\mu^{*}_{p} = [v^{*}_1, \cdots,
+   v^{*}_n]_p$. Similarly one can define an orientation on $\xi$ if
+   $\xi_{*}$ is orientable.
 
+   (/TODO/: Need to show that $\mu^{*}_p$ defines an orientation,
+   i.e., verify the compatibility condition.)
 
+** 6
+1. Let $\{v_i\}, i = 1, \cdots, n$ be a basis of $V$ and let $f(v_i) =
+   w_i$; since $f$ is an isomorphism, $\{w_i\}, i = 1, \cdots, n$
+   shall be a basis of $W$. To show that the diagram is commutative,
+   it suffices to show that for every value of $i$, $f^{**}(v^{**}_i)
+   = (f(v_i))^{**} = w^{**}_i$. This is easy because, the left hand
+   side denotes the function that maps $w^{*}_{j}$ to
+   $v^{**}_{i}(f^{*}(w^{*}_{j})) = v^{**}_{i}(v^{*}_{j}) =
+   \delta_{i}^{j}$ and the right hand side denotes the same function.
+
+2.
+
+** 7
+1. This is trivial.
+   
+2. This follows from Problem 6 (a).
+
+3. This is easy to verify. 
 
