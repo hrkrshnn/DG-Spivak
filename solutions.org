@@ -25,7 +25,7 @@
 #+latex_header: \def\E{\mathcal{E}}
 #+latex_header: \def\SL{\operatorname{SL}}
 #+latex_header: \def\GL{\operatorname{GL}}
-
+#+latex_header: \def\Hom{\operatorname{Hom}}
 
 * Chapter 1: Manifolds
 ** 1
@@ -769,5 +769,24 @@ $p$, i.e., if $X \in M_p$, then $X(fg) = f(p)X(g) + g(p)X(f)$.
    
 2. This follows from Problem 6 (a).
 
-3. This is easy to verify. 
+3. This is easy to verify.
 
+** 8
+1. This follows from Cauchy-Schwarz inequality, and that the change of
+   basis transformation is invertible. 
+   
+2. 
+
+3. If $M$ is the matrix corresponding to $f\colon V \rightarrow W$,
+   then the matrix corresponding to $f^{**}\colon V^{**} \rightarrow
+   W^{**}$ (here the basis are $\{v_i\}, \{w_i\}, \{v^{**}_{i}\},
+   \{w^{**}_{i}\}$). The continuity is immediate.
+
+4. We may define it in the following manner: if $F$ is a contravariant
+   functor then it shall induce a map between $\Hom(V, W)$ and
+   $\Hom(F(V), F(W))$. We can call $F$ to be continuous if these maps
+   are continuous for all $V$ and $W$. The local homeomorphism $t'$
+   can be defined in a similar fashion (refer to how $T^{*}M$ is
+   defined).
+
+5. This is similar to (c). 
