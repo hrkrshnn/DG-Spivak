@@ -789,4 +789,15 @@ $p$, i.e., if $X \in M_p$, then $X(fg) = f(p)X(g) + g(p)X(f)$.
    can be defined in a similar fashion (refer to how $T^{*}M$ is
    defined).
 
-5. This is similar to (c). 
+5. This is similar to (c).
+
+* Chapter 9: Riemannian Metrics
+
+** 1
+1. Skipped
+2. Notice that $h(-v, -v) = -h(-v, v) = h(v, v)$. Similarly use the
+   Blinear nature of $h$ to show the second identity.
+3. What? $q(-v) = v$?
+
+   
+
